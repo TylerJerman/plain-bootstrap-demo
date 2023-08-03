@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './ContainerFluidExample.css'
+import "bootstrap-icons/font/bootstrap-icons.css"
 
 const amountOfRows = 12
 
@@ -15,12 +16,10 @@ for(let i=0; i<amountOfRows; i++) {
 
   return (
     <Container fluid>
-      <Row>
-        <Col className="col" xs="12" sm="6" md="6" lg="3">
-          Sidebar
-        </Col>
-        <Col className="col" xs="12" sm="6" md="6" lg="9">
-          Main Content
+       <Row>
+        <Col className="col" xs={{ span: 6, order: 1 }} lg={{ span: 6, order: 2}}>WASSUP</Col>
+        <Col className="col" xs={{ span: 6, order: 2 }} lg ={{ span: 6, order: 1}}>
+          <i class="bi bi-eye-fill"></i>
         </Col>
       </Row>
   </Container>
